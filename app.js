@@ -12,7 +12,7 @@ app.use(express.json());
 app.set("view engine", "ejs");
 
 // DB
-const mongoURI = "mongodb://ujsqcrr38xthvue5hokd:Z1VBFBUQt7xUTU9FAGoi@bv0e9dqtczzhdfe-mongodb.services.clever-cloud.com:27017/bv0e9dqtczzhdfe";
+const mongoURI = "mongodb://umidzxbep4xmxomcm4kh:fu4KSDGWcNVF8DVlpLJy@b68fdezb1hzazzc-mongodb.services.clever-cloud.com:27017/b68fdezb1hzazzc";
 
 // connection
 const conn = mongoose.createConnection(mongoURI, {
@@ -188,8 +188,8 @@ res.send(genurl);
   res.redirect("/");
 });
 
-const port = 27017;
+const port = process.env.PORT||27017;
 
-app.listen(port ,"bv0e9dqtczzhdfe-mongodb.services.clever-cloud.com",() => {
+app.listen(port ,() => {
   console.log("server started on " + port);
 });

@@ -188,8 +188,8 @@ res.send(genurl);
   res.redirect("/");
 });
 
-const port = 5001;
+const port = process.env.PORT||5001;
 
-app.listen('https://nodeflutter.herokuapp.com' ,() => {
+app.listen(port ,() => {
   console.log("server started on " + port);
 });

@@ -12,7 +12,7 @@ app.use(express.json());
 app.set("view engine", "ejs");
 
 // DB
-const mongoURI = "mongodb://localhost:27017/node-file-upl";
+const mongoURI = "mongodb://ujsqcrr38xthvue5hokd:Z1VBFBUQt7xUTU9FAGoi@bv0e9dqtczzhdfe-mongodb.services.clever-cloud.com:27017/bv0e9dqtczzhdfe";
 
 // connection
 const conn = mongoose.createConnection(mongoURI, {

@@ -178,7 +178,7 @@ app.get("/generateURLControl/:url",(req,res)=>{
 
 app.get("/generateURL",(req,res)=>{
   var guid = guID.create();
-  genurl = "http://localhost:5001/" + guid;
+  genurl =  guid;
   generatedURL={
     url:genurl,
     res:'OK',

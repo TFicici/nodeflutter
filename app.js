@@ -167,7 +167,11 @@ app.post("/files/del/:id", (req, res) => {
   });
 });
 
-
+app.get("/generateURLControl/:url",(req,res)=>{
+  var alinanURL=req.params.filename
+  res.send(alinanURL)
+  
+});
 
 app.get("/generateURL",(req,res)=>{
   var guid = guID.create();

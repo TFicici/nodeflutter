@@ -184,7 +184,7 @@ app.get("/generateURL",(req,res)=>{
     res:'OK',
   };
 
-  var myobj = { key: generatedURL };
+  var myobj = { key: genurl };
 
   conn.collection('url').insertOne(myobj, function(err, res) {
     if (err) throw err;

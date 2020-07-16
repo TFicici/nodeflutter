@@ -169,7 +169,7 @@ app.post("/files/del/:id", (req, res) => {
 
 app.get("/generateURLControl/:url",(req,res)=>{
   var alinanURL=req.params.url;
-  res.send(alinanURL);
+  
   conn.collection('url').findOne({key:alinanURL},function(err,key){
       res.send('OK');
   });

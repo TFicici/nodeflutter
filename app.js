@@ -171,7 +171,8 @@ app.get("/generateURLControl/:url",(req,res)=>{
   var alinanURL=req.params.url;
   
   conn.collection('url').find({key:alinanURL},function(err,key){
-      res.send(key);
+    if (err) throw err;
+    console.log("1 document inserted");
   });
   
 });

@@ -171,7 +171,7 @@ app.get("/generateURLControl/:url",(req,res)=>{
   var alinanURL=req.params.url;
   
   conn.collection('url').findOne({key:alinanURL},function(err,key){
-      res.send(key+err);
+      res.send(err);
   });
   
 });

@@ -172,7 +172,7 @@ app.get("/generateURLControl/:url",(req,res)=>{
   
   conn.collection('url').find({key:alinanURL},function(err,key){
     if (err) throw err;
-    console.log("1 document inserted");
+    console.log("Kontrol edildi");
   });
   
 });

@@ -168,7 +168,7 @@ app.post("/files/del/:id", (req, res) => {
 });
 
 app.get("/generateURLControl/:url",(req,res)=>{
-  var alinanURL=req.params.filename
+  var alinanURL=req.params.url
   res.send(alinanURL)
   
 });

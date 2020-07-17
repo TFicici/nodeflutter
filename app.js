@@ -168,14 +168,16 @@ app.post("/files/del/:id", (req, res) => {
 });
 
 app.get("/generateURLControl/:url",(req,res)=>{
-  var alinanURL=req.params.url;
-  
-  conn.collection('url').find({'key.url':alinanURL},(err,key)=>{
-    
-    if (err) throw err;
-    res.send(key);
-  });
-  
+  var alinanURL=String(req.params.url);
+
+  conn.collection('url').findOne({key:alinanURL} ,(error, result) => {
+    if(error) {
+        return res.status(500).send(error);
+    }else{
+    res.json(result);
+  }
+});
+
 });
 
 app.get("/generateURL",(req,res)=>{
